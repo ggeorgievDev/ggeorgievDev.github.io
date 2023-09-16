@@ -4,42 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>George Georgiev Development</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav></nav>
-    </header>
-
-    <main>
-      <section>
-        <h1>Welcome!</h1>
-
-        <p>
-          This is my personal home page. I'm a web developer with a recently
-          discovered passion for video games.
-        </p>
-      </section>
-
-      <section>
-        <h2>Support (For deployed games )</h2>
-
-        <p>
-          As it's only me working on all my projects, the best person to contact
-          would be me.
-        </p>
-      </section>
-
-      <section>
-        <h2>Privacy Policies</h2>
-
-        <ul>
+      <nav class="navbar ">
+        <ul class="flex gap-4">
+          <li><a href="/" class="btn btn-primary">Home</a></li>
           <li>
-            <a href="./privacy-policies/gallery-slide.html">
-              Privay Policy for "Gallery Slide"
-            </a>
+            <div class="dropdown dropdown-hover">
+              <label class=" btn btn-primary">Privacy Policies</label>
+              <ul
+                class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a href="./privacy-policies/gallery-slide.html"
+                    >Gallery Slide</a
+                  >
+                </li>
+              </ul>
+            </details>
           </li>
         </ul>
+      </nav>
+    </header>
+
+    <main class="bg-base-100">
+      <section class="hero">
+        <div class="hero-content text-center">
+          <div>
+            <h1 class="text-5xl font-bold">Welcome!</h1>
+
+            <p class="py-6 text-xl">
+              This is my personal home page. I'm a web developer with a recently
+              discovered passion for video games.
+            </p>
+
+            <p class="text-xl">
+              The page is currently under construction. More content to be added
+              soon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero py-6 bg-info-content">
+        <div class="hero-content text-center">
+          <div>
+            <h2 class="text-4xl font-bold">Support (For deployed games )</h2>
+
+            <p class="py-6">
+              As it's only me working on all my projects, the best person to
+              contact would be me.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero py-6 bg-base-100">
+        <div class="hero-content flex-col">
+          <h2 class="text-4xl font-bold">Privacy Policies</h2>
+
+          <ul class="text-xl py-4">
+            <li>
+              <a
+                href="./privacy-policies/gallery-slide.html"
+                class="link link-hover"
+              >
+                Privay Policy for "Gallery Slide"
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
+
+    <footer class="footer p-10 bg-primary text-base-content">
+      <aside>
+        <p>Georgi Georgiev Development<br />Just Creating Stuff.</p>
+      </aside>
+      <nav>
+        <header class="footer-title">Pages</header>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">"Gallery Slide" Privacy Policy</a>
+      </nav>
+    </footer>
   </body>
 </html>
